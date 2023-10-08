@@ -333,7 +333,7 @@ export class Upunching extends State {
     this.game.player.ybefore = 20;
     this.game.player.yafter = 20;
     this.game.player.maxjump = this.game.player.originalmaxjump;
-    this.game.player.speed = this.game.player.originalspeed - 2;
+    this.game.player.speed = this.game.player.originalspeed - 1;
     this.game.player.fps = 40;
     if (this.game.player.checkonGround())
       this.game.player.vertspeed -= this.game.player.maxjump;
@@ -401,6 +401,7 @@ export class Hit extends State {
     this.game.player.frameX = 0;
     this.game.player.maxFrame = 20;
     this.game.player.image = pic_7;
+    this.game.music.dizzymusic();
   }
   HandleInput(input) {
     if (this.game.player.dead) this.game.player.setState(states.Dying, 0);

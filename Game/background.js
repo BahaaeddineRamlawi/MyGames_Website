@@ -44,21 +44,21 @@ export class Background {
       this.game,
       this.width,
       this.height,
-      0.5,
+      0.3,
       this.layer2pic
     );
     this.layer3 = new Layer(
       this.game,
       this.width,
       this.height,
-      0.9,
+      0.6,
       this.layer3pic
     );
     this.layer4 = new Layer(
       this.game,
       this.width,
       this.height,
-      1.2,
+      1,
       this.layer4pic
     );
     this.backgroundlayers = [

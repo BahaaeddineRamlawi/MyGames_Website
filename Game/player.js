@@ -23,7 +23,7 @@ export class Player {
     this.x = 0;
     this.y = this.game.height - this.trueheight - this.game.groundspace;
     this.image = pic_1;
-    this.originalspeed = 5;
+    this.originalspeed = 2;
     this.speed = this.originalspeed;
     this.vertspeed = 0;
     this.counter = 0;
@@ -67,11 +67,11 @@ export class Player {
     if (this.x < 0) this.x = 0;
     if (this.x > this.game.width - this.truewidth)
       this.x = this.game.width - this.truewidth;
-    this.y += this.vertspeed;
+    this.y += this.vertspeed / 2;
     if (!this.checkonGround()) {
       if (this.hovering) this.vertspeed += 0.25;
-      else if (this.crush) this.vertspeed += 3;
-      else this.vertspeed += 1;
+      else if (this.crush) this.vertspeed += 2;
+      else this.vertspeed += 0.5;
     } else {
       this.hovering = false;
       this.crush = false;
